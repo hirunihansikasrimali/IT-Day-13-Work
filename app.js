@@ -8,30 +8,67 @@
 //localStorage.clear();
 
 
-const customerList=[
-   {
-    name:"hiruni",
-    age:19,
-    live:"monaragala"
-   },
-   {
-    name:"hiru",
-    age:19,
-    live:"monaragala"
-   },
-   {
-    name:"hiruni",
-    age:19,
-    live:"monaragala"
-   },
-   {
-    name:"hiruni",
-    age:19,
-    live:"monaragala"
-   }
-]
+// const customerList=[
+//    {
+//     name:"hiruni",
+//     age:19,
+//     live:"monaragala"
+//    },
+//    {
+//     name:"hiru",
+//     age:19,
+//     live:"monaragala"
+//    },
+//    {
+//     name:"hiruni",
+//     age:19,
+//     live:"monaragala"
+//    },
+//    {
+//     name:"hiruni",
+//     age:19,
+//     live:"monaragala"
+//    }
+// ]
 
-let arCustomers = JSON.stringify(customerList);
-localStorage.setItem("customerList", arCustomers);
-let listCustomer = localStorage.getItem("customerList");
-console.log(JSON.parse(listCustomer));
+// let arCustomers = JSON.stringify(customerList);
+// localStorage.setItem("customerList", arCustomers);
+// let listCustomer = localStorage.getItem("customerList");
+// console.log(JSON.parse(listCustomer));
+
+// localStorage.clear();
+
+function addCustomer(){
+    let customerId = document.getElementById("customerId").value;
+    let customerName = document.getElementById("customerName").value;
+    let customerAge = document.getElementById("customerAge").value;
+    let customerAddress = document.getElementById("customerAddress").value;
+
+    const customer={
+        custId: customerId,
+        custName: customerName,
+        custAge: customerAge,
+        custAddress: customerAddress
+    }
+    saveCustomerLocalDb(customer);
+}
+
+function saveCustomerLocalDb(customer){
+    if(localStorage.getItem('customerList')){
+        console.log(true);
+        let arOfCustomers = JSON.parse(localStorage.getItem("customerList"));
+        arOfCustomers.push(customer);
+
+        localStorage.setItem("customerList", JSON.stringify(arOfCustomers));
+    }else{
+        console.log(false);
+        const customerList = []
+        customerList.push(customer);
+        let arCustomers=JSON.stringify(customerList);
+        localStorage.setItem("customerList", arCustomers);
+    }
+
+    let arOfCustomers = JSON.parse(localStorage.getItem("customerList"));
+    console.log(arOfCustomers);
+
+}
