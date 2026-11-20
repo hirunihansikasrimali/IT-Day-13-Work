@@ -72,3 +72,28 @@ function saveCustomerLocalDb(customer){
     console.log(arOfCustomers);
 
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// function viewCustomer(){
+//     let arOfCustomers = JSON.parse(loc)
+// }
+
+
+import  customer from "./model/Customer.js";
+import Iteam from "./model/Iteam.js";
+
+let customer = new Customer("001", "saman", "20", "kalutara");
+console.log(customer);
+let iteam = new Iteam();
+console.log(iteam);
+
+//////////////////////////////////////////
+
+import {customerList, getSum} from "./example.js";
+let sum = getSum(10,20);
+console.log(sum);
+
+
