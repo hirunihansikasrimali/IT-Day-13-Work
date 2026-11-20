@@ -38,40 +38,40 @@
 
 // localStorage.clear();
 
-function addCustomer(){
-    let customerId = document.getElementById("customerId").value;
-    let customerName = document.getElementById("customerName").value;
-    let customerAge = document.getElementById("customerAge").value;
-    let customerAddress = document.getElementById("customerAddress").value;
+// function addCustomer(){
+//     let customerId = document.getElementById("customerId").value;
+//     let customerName = document.getElementById("customerName").value;
+//     let customerAge = document.getElementById("customerAge").value;
+//     let customerAddress = document.getElementById("customerAddress").value;
 
-    const customer={
-        custId: customerId,
-        custName: customerName,
-        custAge: customerAge,
-        custAddress: customerAddress
-    }
-    saveCustomerLocalDb(customer);
-}
+//     const customer={
+//         custId: customerId,
+//         custName: customerName,
+//         custAge: customerAge,
+//         custAddress: customerAddress
+//     }
+//     saveCustomerLocalDb(customer);
+// }
 
-function saveCustomerLocalDb(customer){
-    if(localStorage.getItem('customerList')){
-        console.log(true);
-        let arOfCustomers = JSON.parse(localStorage.getItem("customerList"));
-        arOfCustomers.push(customer);
+// function saveCustomerLocalDb(customer){
+//     if(localStorage.getItem('customerList')){
+//         console.log(true);
+//         let arOfCustomers = JSON.parse(localStorage.getItem("customerList"));
+//         arOfCustomers.push(customer);
 
-        localStorage.setItem("customerList", JSON.stringify(arOfCustomers));
-    }else{
-        console.log(false);
-        const customerList = []
-        customerList.push(customer);
-        let arCustomers=JSON.stringify(customerList);
-        localStorage.setItem("customerList", arCustomers);
-    }
+//         localStorage.setItem("customerList", JSON.stringify(arOfCustomers));
+//     }else{
+//         console.log(false);
+//         const customerList = []
+//         customerList.push(customer);
+//         let arCustomers=JSON.stringify(customerList);
+//         localStorage.setItem("customerList", arCustomers);
+//     }
 
-    let arOfCustomers = JSON.parse(localStorage.getItem("customerList"));
-    console.log(arOfCustomers);
+//     let arOfCustomers = JSON.parse(localStorage.getItem("customerList"));
+//     console.log(arOfCustomers);
 
-}
+// }
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -92,7 +92,7 @@ console.log(iteam);
 
 //////////////////////////////////////////
 
-import {customerList, getSum} from "./example.js";
+import {customerList, getSum} from "./Example.js";
 let sum = getSum(10,20);
 console.log(sum);
 
