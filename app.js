@@ -94,7 +94,7 @@
 
 import {customerList, getSum} from "./Example.js";
 let sum = getSum(10,20);
-// console.log(sum);
+console.log(sum);
 
 
 import Customer from "./model/Customer.js";
