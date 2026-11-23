@@ -93,7 +93,7 @@
 // //////////////////////////////////////////
 
 import {customerList, getSum} from "./Example.js";
-// let sum = getSum(10,20);
+let sum = getSum(10,20);
 // console.log(sum);
 
 
