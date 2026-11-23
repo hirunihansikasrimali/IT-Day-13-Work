@@ -92,7 +92,7 @@
 
 // //////////////////////////////////////////
 
-// import {customerList, getSum} from "./Example.js";
+import {customerList, getSum} from "./Example.js";
 // let sum = getSum(10,20);
 // console.log(sum);
 
