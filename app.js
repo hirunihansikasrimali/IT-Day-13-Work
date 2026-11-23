@@ -98,7 +98,7 @@
 
 
 import Customer from "./model/Customer.js";
-// import Item from "./model/Item.js";
+import Item from "./model/Item.js";
 
 let customer1 = new Customer("001", "saman", "20", "kalutara");
 console.log(customer1);
