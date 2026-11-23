@@ -97,14 +97,14 @@
 // console.log(sum);
 
 
-import Customer from "./model/Customer.js";
-import Item from "./model/Item.js";
+// import Customer from "./model/Customer.js";
+// import Item from "./model/Item.js";
 
-let customer1 = new Customer("001", "saman", "20", "kalutara");
-console.log(customer1);
+// let customer1 = new Customer("001", "saman", "20", "kalutara");
+// console.log(customer1);
 
-let item1 = new Item();
-console.log(item1);
+// let item1 = new Item();
+// console.log(item1);
 
 import { customerList, getSum } from "./Example.js";
 
@@ -114,3 +114,6 @@ console.log(sum);
 console.log(customerList);
 
 
+
+/////////////////
+// viva-- synchronies, modules, bootstrap , 
