@@ -9,4 +9,5 @@ body{
     min-height: 100vh;
     background-image: url();
     object-fit: cover;
+    background-size: cover;
 }
