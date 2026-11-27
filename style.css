@@ -28,4 +28,5 @@ h1{
 .container{
     width: 500px;
     margin: auto;
+    justify-content: space-between;
 }
